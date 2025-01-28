@@ -4,8 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%- title %></title>
+    <%- include('partials/head')%>
 </head>
 <body>
-    <h1>Hello World</h1>
+    
+    <div class="main">
+        <input type="checkbox" id="chk" aria-hidden="true">
+
+        <%- include('partials/signup') %>
+
+        <%- include('partials/login') %>
+
+    </div>
+
 </body>
 </html>

@@ -9,8 +9,14 @@ const app = express();
 // Directorio actual
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
-app.set('views', join(__dirname, '..', 'frontend', 'views'))
+// directorios
+const dirViews = join(__dirname, '..', 'frontend', 'views')
+const dirPublic = join(__dirname, '..', 'frontend', 'public')
+
+app.set('views', dirViews)
 app.set('view engine', 'ejs')
+app.use(express.static(dirPublic))
+
 // importa la ruta de auth.routes.js
 app.use(indexRoutes)
 
