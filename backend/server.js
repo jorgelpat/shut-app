@@ -11,7 +11,7 @@ app.set('views', join(__dirname, '..', 'frontend', 'views'))
 app.set('view engine', 'ejs')
 
 app.get('/', (req,res) => {
-    res.render('index')
+    res.render('index', {title: 'Shut-app'})
 })
 
 app.listen(5000, () => {
